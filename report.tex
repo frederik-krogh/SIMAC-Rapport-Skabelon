@@ -1,3 +1,82 @@
+%------------------------------------------------
+%   INDHOLD: Guide til LaTeX og SIMAC-skabelonen
+%   Forord, introduktion, eksempler og kilder
+%------------------------------------------------
+
+\section*{Forord}
+
+Denne skabelon er udviklet af \textbf{Frederik Krogh} som et personligt værktøj til at skrive rapporter på maskinmesteruddannelsen.
+Jeg deler den her, så andre kan bruge den, hvis de har lyst. Skabelonen er ikke officielt tilknyttet SIMAC, og jeg har desværre ikke mulighed for at hjælpe med hverken LaTeX eller opgaveskrivning.
+
+Hvis du synes, den er nyttig, er du meget velkommen til at bruge den som grundlag for dine egne rapporter og tilpasse den, som du ønsker.
+
+\newpage
+
+%------------------------------------------------
+\section{Introduktion til LaTeX}
+
+\subsection{Hvad er LaTeX?}
+LaTeX er et tekstbehandlingssystem udviklet til at skrive tekniske og videnskabelige dokumenter.
+I stedet for at redigere tekst visuelt som i Word, skriver du tekst og kommandoer i kode, som derefter omdannes til en PDF.
+
+LaTeX bruges verden over på tekniske uddannelser og i industrien, fordi det sikrer ensartet formatering og professionelle rapporter – perfekt til maskinmesterstuderende.
+
+\subsection{Hvorfor bruge LaTeX?}
+\begin{itemize}
+  \item \textbf{Ensartet formatering:} Overskrifter, figurer og tabeller nummereres automatisk.
+  \item \textbf{Automatiske kilder:} BibTeX håndterer litteraturlisten for dig.
+  \item \textbf{Fuld kontrol:} Du kan præcist styre, hvordan dit dokument ser ud.
+  \item \textbf{Perfekt til teknik:} Ideelt til formler, måleresultater, diagrammer og tekniske beregninger.
+\end{itemize}
+
+\subsection{Hvor skriver man LaTeX?}
+Hvis du aldrig har programmeret før, så brug editoren \textbf{Crixit} (\href{https://crixit.dk}{crixit.dk}).
+Den fungerer direkte i browseren, kræver ingen installation og er danskudviklet.
+
+Du kan bruge \textbf{ChatGPT} som sparringspartner til LaTeX.
+For eksempel kan du spørge:
+\textit{"Hvordan laver jeg en tabel i LaTeX med tre kolonner?"}
+
+\subsection{Onlineværktøjer til LaTeX}
+\begin{itemize}
+  \item \href{https://www.tablesgenerator.com/latex_tables}{Tables Generator} – lav tabeller uden at skrive kode.
+  \item \href{https://latexdraw.com}{LaTeXDraw} – lav tekniske figurer.
+  \item \href{https://detexify.kirelabs.org/classify.html}{Detexify} – tegn et symbol og få LaTeX-koden.
+\end{itemize}
+
+\newpage
+
+%------------------------------------------------
+\section{Kom godt i gang med SIMAC-skabelonen}
+
+\subsection{Download og opsætning}
+Hvis du aldrig har brugt GitHub før, kan du hente skabelonen som en ZIP-fil:
+
+\begin{enumerate}
+  \item Gå til \href{https://github.com/frederik-krogh/SIMAC-Rapport-Skabelon}{https://github.com/frederik-krogh/SIMAC-Rapport-Skabelon}.
+  \item Klik på den grønne knap \textbf{“Code”} og vælg \textbf{“Download ZIP”}.
+  \item Pak ZIP-filen ud på din computer.
+  \item Åbn mappen i Crixit.
+  \item Redigér i \texttt{report.tex}.
+\end{enumerate}
+
+\subsection{Skabelonens struktur}
+\begin{itemize}
+  \item \texttt{main.tex} – hovedfilen, som samler hele dokumentet. Det er her du retter opgavens navn, gruppemedlemmer osv.
+  \item \texttt{report.tex} – selve indholdet af rapporten, altså det du læser her.
+  \item \texttt{figurer/} – her placeres billeder og diagrammer.
+  \item \texttt{kilder.bib} – din litteraturliste.
+\end{itemize}
+
+De øvrige filer og mapper skal du i udgangspunktet ikke redigere i.
+
+LaTeX samler selv det hele og skaber et ensartet og professionelt dokument.
+
+\newpage
+
+%------------------------------------------------
+\section{Eksempler på brug af skabelonen}
+
 %----------------------------------------------------------------------------------------
 %  SECTIONS
 %----------------------------------------------------------------------------------------
@@ -269,15 +348,15 @@ Etiam vulputate arcu dignissim, finibus sem et, viverra nisl. Aenean luctus cong
 
 \section{Referencing Citations}
 
-This statement requires citation \autocite{Smith:2024jd}.
+This statement requires citation \autocite{githubskabelon}.
 
-This statement requires multiple citations \autocite{Smith:2024jd, Smith:2023qr}.
+This statement requires multiple citations \autocite{simacbog2021, crixit2024}.
 
-This short citation is in the margin\sidecite{Smith:2023qr}.
+This short citation is in the margin\sidecite{tablesgenerator}.
 
-This long citation is in the margin\fullsidecite{Smith:2024jd}.
+This long citation is in the margin\fullsidecite{energistyrelsen2023}.
 
-This statement has an in-text citation: \textcite{Smith:2024jd}.
+This statement has an in-text citation: \textcite{tablesgenerator}.
 
 %----------------------------------------------------------------------------------------
 %  LINKS
@@ -343,40 +422,25 @@ The block below is a code listing. It displays code in an easy to use way with l
 }
 \end{lstlisting}
 
-%----------------------------------------------------------------------------------------
-%   REFERENCES/BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
+\newpage
+
+%------------------------------------------------
+\section{Tips og tricks}
+
+\begin{itemize}
+  \item Gem figurer i formatet \texttt{.pdf} eller \texttt{.png}.
+  \item Brug korte filnavne uden mellemrum.
+  \item Kompiler to gange for at opdatere kilder og figurer.
+  \item Brug \texttt{\textbackslash newpage} for at starte på en ny side.
+  \item Angiv altid kilder for data, figurer og tekst.
+\end{itemize}
 
 \newpage
 
-\addcontentsline{toc}{section}{Reference List} % Add the bibliography to the table of contents
+%------------------------------------------------
+\section{Konklusion}
 
-\begin{twothirdswidth} % Content in this environment to be at two-thirds of the whole page width
-  \printbibliography[title=Reference List] % Output the bibliography with a custom section title
-\end{twothirdswidth}
+LaTeX kan virke teknisk i starten, men når man først forstår strukturen, er det et effektivt og professionelt værktøj.
+Denne skabelon gør det let at komme i gang og sikrer, at rapporten får et ensartet og flot udtryk.
 
-%----------------------------------------------------------------------------------------
-%  APPENDICES
-%----------------------------------------------------------------------------------------
-
-\newpage
-
-\section*{Appendices}
-
-\begin{appendices}
-
-  \section{Appendix Section}
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mi risus, quis tempor libero hendrerit at. Duis hendrerit placerat quam et semper. Nam ultricies metus vehicula arcu viverra, vel ullamcorper justo elementum. Pellentesque vel mi ac lectus cursus posuere et nec ex. Fusce quis mauris egestas lacus commodo venenatis. Ut at arcu lectus. Donec et urna nunc. Morbi eu nisl cursus sapien eleifend tincidunt quis quis est. Donec ut orci ex. Praesent ligula enim, ullamcorper non lorem a, ultrices volutpat dolor. Nullam at imperdiet urna. Pellentesque nec velit eget euismod pretium.
-
-  \section{Appendix Section}
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mi risus, quis tempor libero hendrerit at. Duis hendrerit placerat quam et semper. Nam ultricies metus vehicula arcu viverra, vel ullamcorper justo elementum. Pellentesque vel mi ac lectus cursus posuere et nec ex. Fusce quis mauris egestas lacus commodo venenatis. Ut at arcu lectus. Donec et urna nunc. Morbi eu nisl cursus sapien eleifend tincidunt quis quis est. Donec ut orci ex. Praesent ligula enim, ullamcorper non lorem a, ultrices volutpat dolor. Nullam at imperdiet urna. Pellentesque nec velit eget euismod pretium.
-
-  \section{Appendix Section}
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mi risus, quis tempor libero hendrerit at. Duis hendrerit placerat quam et semper. Nam ultricies metus vehicula arcu viverra, vel ullamcorper justo elementum. Pellentesque vel mi ac lectus cursus posuere et nec ex. Fusce quis mauris egestas lacus commodo venenatis. Ut at arcu lectus. Donec et urna nunc. Morbi eu nisl cursus sapien eleifend tincidunt quis quis est. Donec ut orci ex. Praesent ligula enim, ullamcorper non lorem a, ultrices volutpat dolor. Nullam at imperdiet urna. Pellentesque nec velit eget euismod pretium.
-
-\end{appendices}
-
-%----------------------------------------------------------------------------------------
+Brug skabelonen som et værktøj til at fokusere på det faglige indhold – resten tager LaTeX sig af.
