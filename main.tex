@@ -1,0 +1,75 @@
+% -------------------------------------------------
+% SIMACReportTemplate - Bachelor rapport skabelon for maskinmesterstuderende
+% Udarbejdet af: Frederik Krogh
+% Oprindelig skabelon: Sullivan Business Report LaTeX Class v1.0
+% Author: Vel (vel@latextemplates.com)
+% Licens: CC BY-NC-SA 4.0
+%
+% Bemærk:
+% - Logoer, baggrundsbilleder og andre grafiske elementer tilhører Svendborg Internationale Maritime Academy (SIMAC)
+% - Denne skabelon er ikke udgivet af SIMAC
+% - Formål: Personlig brug, studiegruppe og andre elever på SIMAC
+% - Skabelonen må ikke anvendes kommercielt
+% - Alle figurer skal placeres i mappen "figurer"
+% - Rapportens indhold skrives i filen report.tex
+% - main.tex bruges kun til at angive titel, fag, gruppe og andre metadata
+% - Værktøjer: Crixet kan bruges til at skrive rapporten, ChatGPT kan hjælpe med LaTeX-kode og korrektur
+% - Gratis LaTeX tabelgenerator: https://www.tablesgenerator.com/latex_tables
+% -------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	CLASS, PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+	a4paper, 
+	12pt, 
+]{SIMACReportTemplate}
+
+\input{settings}
+
+%----------------------------------------------------------------------------------------
+%	REPORT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\reporttitle{Grundlæggende Kølekomponenter} % Titel på rapporten
+\reportsubtitle{Thermal Machinery · Køleteknik} % Fag og evt. emne
+\reportauthors{Studiegruppe 1\\\smallskip} % Gruppe eller eget navn
+\reportdate{\today} % Rapportdato
+
+% Gruppe medlemmer (fulde navne + studienummer)
+\reportcontributers{
+    Jeppe Præstiin Mikkelsen | 1069213 \\%
+    Frederik Fürsterling | 10521773 \\%
+    Frederik Krogh Kjer | 10554377 \\%
+    Simon Ajeet Kristensen | 10527177%
+}
+
+% Vejleder / fagansvarlig
+\reportadvisor{Jakob Nygaard Petersen}
+
+\begin{document}
+
+% Indlæser forsiden
+\includereporttitlepage
+% Indlæser erklæringsside (disclosure)
+\includereportdisclosurepage
+% Indlæser oversigter
+\includereportpretocpage
+% Indlæser indholdsfortegnelse
+\includereporttocpage
+
+%----------------------------------------------------------------------------------------
+%	INDHOLD
+%----------------------------------------------------------------------------------------
+% Her skrives selve rapportens indhold i report.tex. main.tex bruges kun til metadata.
+
+\input{report} % Henviser til report.tex med alt rapportindhold
+
+%----------------------------------------------------------------------------------------
+%	KILDEHENVISNINGER
+%----------------------------------------------------------------------------------------
+
+\includereportrefpage
+
+\end{document}
